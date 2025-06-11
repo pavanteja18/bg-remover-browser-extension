@@ -38,7 +38,7 @@ app.post("/remove-bg", async (req, res) => {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        "X-Api-Key": process.env.REMOVE_BG_API_KEY,
+        "X-Api-Key": process.env.REMOVEBG_API_KEY,
       },
       body: formData,
     });
@@ -72,5 +72,5 @@ app.post("/remove-bg", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
-  console.log("API Key Loaded:", process.env.REMOVE_BG_API_KEY ? "Yes" : "No");
+  console.log("API Key Loaded:", process.env.REMOVEBG_API_KEY ? "Yes" : "No");
 });
